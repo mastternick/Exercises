@@ -1,0 +1,34 @@
+
+<!-- Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5. -->
+
+<p id="demo"></p>
+
+<script>
+	loop();
+	function loop() {
+		var nr = 100;
+		var text = "";
+		var i;
+		var myHTML = '';
+		for (i = 0; i <= nr; i++) {
+			text = i;
+			console.log(text);
+			if ((text % 3 == 0) && (text % 5 == 0)) {
+				console.log("fizzbuzz");
+				myHTML += text + ' fizzbuzz' + "<br>";
+			}
+			if ((text % 3 == 0) && (text % 5 != 0)) {
+				console.log("fizz");
+				myHTML += text + ' fizz' + "<br>";
+			}
+			if ((text % 5 == 0) && (text % 3 != 0)) {
+				console.log("buzz");
+				myHTML += text + ' buzz' + "<br>";
+			}
+			if ((text % 3 != 0) && (text % 5 != 0)) {
+				myHTML += text + "<br>";
+			}
+			document.getElementById("demo").innerHTML = myHTML;
+		}
+	}
+</script>
